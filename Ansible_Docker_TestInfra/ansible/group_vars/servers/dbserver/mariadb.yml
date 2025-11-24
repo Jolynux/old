@@ -1,0 +1,21 @@
+---
+- name: DATABASE INSTALL
+  hosts: dbserver
+  remote_user: root
+  
+  tasks:
+  - name: Install mariadb
+    apt:
+     name: mariadb-server
+     state: latest
+
+  - name: Install mariadb
+    apt:
+     name: mariadb-server
+     state: latest
+     
+  - name: Start and enable service
+    service:
+     name: mariadb
+     enabled: true
+     state: started

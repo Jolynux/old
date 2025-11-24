@@ -1,0 +1,21 @@
+all:
+  children:
+    servers:
+      children:
+        webserver:
+          hosts:
+            srv_[01:03]:
+        dbserver:
+          hosts:
+            srv_[04:06]:
+    workstations:
+      children:
+        ubuntu:
+          hosts:
+            srv_05:
+        debian:
+          hosts:
+            srv_06:
+        redhat:
+          hosts:
+            srv_07:

@@ -1,0 +1,24 @@
+---
+- name: all
+  hosts: all
+  tasks:
+
+  - name: Install vim
+    apt:
+     name: vim
+     state: latest
+
+  - name: Install git
+    apt:
+     name: git
+     state: latest
+
+  - name: Install iputils-ping
+    apt:
+     name: iputils-ping
+     state: latest
+
+  - name: Install iproute2
+    apt:
+     name: iproute2
+     state: latest
