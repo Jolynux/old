@@ -36,7 +36,7 @@ func_sql_port() {
         TEST_SQL=$(docker ps | grep "$SQL_PORT")
         while [[ -n $TEST_SQL ]]; do
                 WEB_PORT=$((WEB_PORT + 1))
-                TEST_WEB=$(docker ps | grep "$SQL_PORT")
+                TEST_SQL=$(docker ps | grep "$SQL_PORT")
         done
         echo "$SQL_PORT"
 
@@ -118,4 +118,5 @@ case "$1" in
                         func_help
                 fi
                 ;;    
+
 esac
